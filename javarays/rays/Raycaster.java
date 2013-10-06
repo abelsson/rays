@@ -30,10 +30,9 @@ public final class Raycaster {
     };
 
     static private vector[] F() {
-        final Vector<vector> tmp = new Vector<>(art.length * art[0].length);
-
         final int nr = art.length;
         final int nc = art[0].length;
+        final Vector<vector> tmp = new Vector<>(nr * nc);
         for (int k = nc - 1; k >= 0; k--) {
             for (int j = nr - 1; j >= 0; j--) {
                 if (art[j][nc - 1 - k] != ' ') {
